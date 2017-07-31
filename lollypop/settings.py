@@ -143,6 +143,18 @@ class SettingsDialog:
 
         switch_mix = builder.get_object("switch_mix")
         switch_mix.set_state(Lp().settings.get_value("mix"))
+
+        combo_inhibitor = builder.get_object("combo_inhibit_suspend_idle")
+        items_liststore = combo_inhibitor.get_model()
+        inhibit_suspend = bool(Lp().settings.get_value("inhibit-suspend"))
+        inhibit_idle = bool(Lp().settings.get_value("inhibit-idle"))
+        inhibit_dic = {(True, True): 3,
+                       (False, True): 2,
+                       (True, False): 1,
+                       (False, False): 0}
+        combo_inhibitor.set_active(
+            inhibit_dic[(inhibit_idle, inhibit_suspend)])
+
         self.__helper = TouchHelper(switch_mix, None, None)
         self.__helper.set_long_func(self.__mix_long_func, switch_mix)
         self.__helper.set_short_func(self.__mix_short_func, switch_mix)
@@ -430,6 +442,20 @@ class SettingsDialog:
             @param widget as Gtk.ComboBoxText
         """
         Lp().settings.set_enum("orderby", widget.get_active())
+
+    def _update_inhibit_suspend_idle_setting(self, widget):
+        """
+            Update the two settings to inhibit standby and screensaver
+            @param widget as Gtk.ComboBoxText
+        """
+        current = widget.get_active()
+        translate_array = [(False, False),
+                           (True, False),
+                           (False, True),
+                           (True, True)]
+        screensaver, suspend = translate_array[current]
+        Lp().settings.set_value("inhibit-idle", GLib.Variant("b", screensaver))
+        Lp().settings.set_value("inhibit-suspend", GLib.Variant("b", suspend))
 
     def _update_spotify_setting(self, widget, state):
         """

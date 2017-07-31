@@ -452,7 +452,7 @@
               </object>
               <packing>
                 <property name="left_attach">0</property>
-                <property name="top_attach">5</property>
+                <property name="top_attach">6</property>
               </packing>
             </child>
             <child>
@@ -466,6 +466,36 @@
                 </items>
                 <signal name="changed" handler="_on_preview_changed" swapped="no"/>
                 <signal name="query-tooltip" handler="_on_preview_query_tooltip" swapped="no"/>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">6</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="inhibit_label">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="halign">start</property>
+                <property name="label" translatable="yes">Powermanagement during playback</property>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">5</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkComboBoxText" id="combo_inhibit_suspend_idle">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="halign">end</property>
+                <items>
+                  <item id="none" translatable="yes">None</item>
+                  <item id="idle" translatable="yes">Disable Screensaver</item>
+                  <item id="suspend" translatable="yes">Disable suspend</item>
+                  <item id="both" translatable="yes">Disable both</item>
+                </items>
+                <signal name="changed" handler="_update_inhibit_suspend_idle_setting" swapped="no"/>
               </object>
               <packing>
                 <property name="left_attach">1</property>

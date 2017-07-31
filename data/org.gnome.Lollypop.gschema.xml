@@ -61,17 +61,17 @@
             <summary>Window maximized</summary>
             <description>Window maximized state.</description>
         </key>
-  	    <key type="ai" name="party-ids">
+            <key type="ai" name="party-ids">
             <default>[]</default>
             <summary>Enabled genres in party mode</summary>
             <description>ID for genres.</description>
         </key>
- 	<key type="as" name="music-path">
+        <key type="as" name="music-path">
             <default>[]</default>
             <summary></summary>
             <description></description>
         </key>
- 	<key type="as" name="music-uris">
+        <key type="as" name="music-uris">
             <default>[]</default>
             <summary>Music URI</summary>
             <description>When empty, use XDG_MUSIC_DIR</description>
@@ -106,7 +106,7 @@
             <summary>INTERNAL</summary>
             <description></description>
         </key>
-	<key type="s" name="preview-output">
+        <key type="s" name="preview-output">
             <default>""</default>
             <summary>Audio output preview on track hover</summary>
             <description>PulseAudio only. Example: alsa_output.pci-0000_00_14.2.analog-stereo. Command to get outputs: $ pacmd list-sinks|grep 'name:'</description>
@@ -176,12 +176,12 @@
             <summary>Show charts</summary>
             <description></description>
         </key>
-	<key type="b" name="artist-artwork">
+        <key type="b" name="artist-artwork">
             <default>false</default>
             <summary>Show artist artwork</summary>
             <description></description>
         </key>
-	 <key type="b" name="dark-ui">
+        <key type="b" name="dark-ui">
             <default>false</default>
             <summary>Use dark gtk theme</summary>
             <description></description>
@@ -191,12 +191,12 @@
             <summary>Disable use of client side window decorations (headerbar)</summary>
             <description></description>
         </key>
-     	 <key type="b" name="show-compilations">
+        <key type="b" name="show-compilations">
             <default>false</default>
             <summary>Show compilations in albums view</summary>
             <description></description>
         </key>
-     	 <key type="b" name="background-mode">
+        <key type="b" name="background-mode">
             <default>false</default>
             <summary>Continue playback when closed</summary>
             <description></description>
@@ -206,7 +206,7 @@
             <summary>Smart sort for artist</summary>
             <description>Ex: The Beatles sorted as Beatles. Resetting database needed.</description>
         </key>
-     	 <key type="b" name="save-state">
+        <key type="b" name="save-state">
             <default>false</default>
             <summary>Restore previous state</summary>
             <description></description>
@@ -231,7 +231,7 @@
             <summary>INTERNAL</summary>
             <description></description>
         </key>
-	    <key type="i" name="paned-listview-width">
+            <key type="i" name="paned-listview-width">
             <default>200</default>
             <summary>INTERNAL</summary>
             <description></description>
@@ -241,12 +241,12 @@
             <summary>JPG cover quality</summary>
             <description>0-100</description>
         </key>
-		<key type="ai" name="list-one-ids">
+        <key type="ai" name="list-one-ids">
             <default>[0]</default>
             <summary>INTERNAL</summary>
             <description></description>
         </key>
-		<key type="ai" name="list-two-ids">
+        <key type="ai" name="list-two-ids">
             <default>[-1]</default>
             <summary>INTERNAL</summary>
             <description></description>
@@ -281,6 +281,18 @@
             <summary>Restart current track on previous</summary>
             <description></description>
         </key>
+        <key type="b" name="inhibit-suspend">
+            <default>false</default>
+            <summary>inhibit suspend during playback</summary>
+        </key>
+        <key type="b" name="inhibit-suspend-idle">
+            <default>false</default>
+            <summary>inhibit suspend/idle during playback</summary>
+        </key>
+        <key type="b" name="inhibit-idle">
+            <default>false</default>
+            <summary>inhibit idle during playback</summary>
+        </key>
         <key enum="org.gnome.Lollypop.Shuffle" name="shuffle">
             <default>'none'</default>
             <summary>Shuffle mode</summary>
@@ -291,12 +303,12 @@
             <summary>Playback behaviour</summary>
             <description></description>
         </key>
-	    <key enum="org.gnome.Lollypop.OrderBy" name="orderby">
+        <key enum="org.gnome.Lollypop.OrderBy" name="orderby">
             <default>'artist'</default>
             <summary>Order albums by</summary>
             <description></description>
         </key>
-	    <key enum="org.gnome.Lollypop.Charts" name="charts">
+        <key enum="org.gnome.Lollypop.Charts" name="charts">
             <default>'itunes'</default>
             <summary>Charts provider</summary>
             <description></description>
