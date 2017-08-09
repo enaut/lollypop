@@ -1,6 +1,4 @@
-#
 # Copyright (C) 2017 Jason Gray <jasonlevigray3@gmail.com>
-#
 # This program is free software: you can redistribute it and/or modify it
 # under the terms of the GNU General Public License version 3, as published
 # by the Free Software Foundation.
@@ -29,6 +27,7 @@ class Inhibitor:
 
         # Load and apply the inhibit settings
         self.__on_inhibit_setting_changed()
+        # Register to settings changes
         Lp().settings.connect(
             "changed::inhibit-suspend",
             self.__on_inhibit_setting_changed,

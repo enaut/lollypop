@@ -285,10 +285,6 @@
             <default>false</default>
             <summary>inhibit suspend during playback</summary>
         </key>
-        <key type="b" name="inhibit-suspend-idle">
-            <default>false</default>
-            <summary>inhibit suspend/idle during playback</summary>
-        </key>
         <key type="b" name="inhibit-idle">
             <default>false</default>
             <summary>inhibit idle during playback</summary>
