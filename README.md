@@ -1,4 +1,4 @@
-# Lollypop
+# Lollypop ***My Own***
 
 ![Lollypop logo](https://raw.github.com/gnumdk/lollypop/master/data/icons/hicolor/256x256/apps/org.gnome.Lollypop.png)
 
